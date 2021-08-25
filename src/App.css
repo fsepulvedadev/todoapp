@@ -61,6 +61,7 @@ label {
   border-radius: 9px;
   color: white;
   text-transform: capitalize;
+  transition: all 0.1;
 }
 
 .title {
@@ -68,11 +69,25 @@ label {
   text-transform: uppercase;
   color: lightseagreen;
 }
-
+.undone {
+}
 .done {
+  animation: desaparece 0.5s;
   opacity: 0.5;
 }
 
 input.done {
   opacity: 0.5;
+}
+
+@keyframes desaparece {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
